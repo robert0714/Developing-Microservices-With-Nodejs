@@ -3,6 +3,7 @@
 var Seneca = require('seneca');
 var Express = require('express');
 var Web = require('seneca-web');
+var seneca = Seneca();
 
 seneca.add({role: 'api',cmd:'bagzina'}, function(args, done) {
      done(null, {bar:"Bagzina!"});
@@ -16,7 +17,6 @@ var Routes = [{
           }
      }];
      
-var seneca = Seneca();
  
 var config = {
      routes: Routes,
